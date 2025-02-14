@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url(./fonts/tine.otf) format('opentype');
+  }
+
+.canvasTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+}
+.canvasThree img {
+    display: inline-block;
+    border: 30px solid transparent;
+    border-image: url('./images/flower.png') 400 round; /* Adjust slice value */
+    border-radius: 30px; /* Smooth corners */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: 	#ff257e;
+}
+
+html {
+    background: linear-gradient(to right, #ffc5e6, #cf45d0);
+    background-size: cover;
+}
+
+ #yes {
+    height: 150px;
+    width: 250px;;
+    color:blueviolet;
+    background-color: 	#ff2644;
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 6rem;
+ }
+
+ #no {
+    height: 150px;
+    width: 250px;;
+    color:blueviolet;
+    background-color: 	#ff2644;
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 6rem;
+ }
+
+ #yes:hover {
+    color:rgb(191, 150, 230);
+    background-color: 	#fa8393;
+ }
+
+ #no:hover {
+    color:rgb(191, 150, 230);
+    background-color: 	#fa8393;
+ }
+ 
+ #yes, #no {
+    box-shadow: 0 0 0 5px rgb(224, 123, 255), 
+    0 0 0 10px #ff2644, 
+    0 0 0 15px rgb(241, 142, 236); 
+
+    padding: 10px;
+ }
+ 
+ #bear {
+    height: 300px;
+ }
+
+ #binkyBoo h1 {
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 4.5rem;
+ }
+
+ body {
+    border: 100px solid transparent;
+    border-image: url('./images/border.png') 100 round;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: fixed; /* Change from absolute to fixed */
+    top: -5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: red;
+    animation: fall linear infinite;
+    z-index: 9999; /* Make sure hearts are above everything */
+    pointer-events: none; /* So they don’t interfere with buttons */
+}
